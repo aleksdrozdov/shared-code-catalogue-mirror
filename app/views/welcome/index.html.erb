@@ -1,4 +1,162 @@
-<h2>Shared code catalogue</h2>
+<% content_for(:html_lang, 'rb') %>
+
+<% content_for(:page_title, "Shared code catalogue") %>
+
+<% content_for(:head) do %><inserted-into-head></inserted-into-head><% end %>
+
+<% content_for(:body_classes, "custom_body_class") %>
+
+<% content_for(:body_start) do %><inserted-into-body-start></inserted-into-body-start><% end %>
+
+<% content_for(:cookie_message, "Custom cookie message") %>
+
+<% content_for(:header_class, "custom_header_class") %>
+
+<% content_for(:inside_header) do %><inside-header></inside-header><% end %>
+
+<% content_for(:proposition_header) do %><proposition-header><div class="header-proposition">
+  <div class="content">
+    <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+    <nav id="proposition-menu">
+      <a href="/" id="proposition-name">Shared code catalogue</a>
+      <ul id="proposition-links">
+        <li><a href="url-to-page-1" class="active">Search</a></li>
+        <li><a href="url-to-page-2">Submit content</a></li>
+      </ul>
+    </nav>
+  </div>
+</div></proposition-header><% end %>
+
+<% content_for(:after_header) do %><after-header></after-header><% end %>
+
+<main id="content" role="main">
 <p>
-  The time is now: <%= Time.now %>
+  Send your feedback to <a href="mailto:code-sharing@digital.cabinet-office.gov.uk">code-sharing@digital.cabinet-office.gov.uk</a>
 </p>
+
+<a href="submit-repository" class="example-back-link">Submit repository</a> or   <a href="browse" class="example-back-link">Browse all projects</a>
+
+<h4 class="heading-small">Repository overview</h4>
+
+<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+
+<ul class="list-bullet">
+  <li>Total number of projects NNNN</li>
+  <li>Number of departments NNN</li>
+  <li>Today's commits NNNNN</li>
+</ul>
+
+<form action="search-result" method="get" class="form">
+
+  <h1 class="form-title heading-large">
+    Search
+  </h1>
+
+  <div class="form-group">
+    <input type="text" class="form-control" id="full-name">
+  </div>
+
+  <div class="form-group">
+    <input type="submit" class="button" value="Search">
+  </div>
+
+</form>
+
+<h2 class="heading-large">
+  Popular projects
+</h2>
+
+
+<div class="grid-row">
+  <div class="column-half">
+    <h2 class="heading-large">Libraries and utilities</h2>
+    <h3 class="heading-medium">CSV Validator</h3>
+    <ul>
+      <li><h4 class="heading-small">TNA</h4></li>
+      <li>A Validation Tool and APIs for validating CSV (Comma Separated Value) files by using CSV Schema.</li>
+      <li>
+        <h4 class="heading-small">Repository </h4>
+        <a href="https://github.com/digital-preservation/csv-validator">
+          <h3>csv-validator</h3>
+        </a>
+      </li>
+      <li><h4 class="heading-small">Contact:</h4> Name Email@address.com</li>
+      <li><h4 class="heading-small">Created:</h4> 6 January 2013</li>
+      <li><h4 class="heading-small">last updated:</h4> 1 June 2015</li>
+      <li><h4 class="heading-small">Technology:</h4> Scala 2.11</li>
+    </ul>
+  </div>
+  <div class="column-half">
+    <h2 class="heading-large">Templates and styles</h2>
+    <h3 class="heading-medium">GOV.UK Admin Template</h3>
+    <ul>
+      <li><h4 class="heading-small">GDS</h4></li>
+      <li>Styles, scripts and templates for getting up and running with Bootstrap based backend admin apps.</li>
+      <li>
+        <h4 class="heading-small">Repository </h4>
+        <a href="https://github.com/alphagov/govuk_admin_template">
+          <h3>govuk_admin_template</h3>
+        </a>
+      </li>
+      <li><h4 class="heading-small">Contact:</h4> Name Email@address.com</li>
+      <li><h4 class="heading-small">Created:</h4> 11 May 2014</li>
+      <li><h4 class="heading-small">last updated:</h4> 2 hours ago</li>
+      <li><h4 class="heading-small">Technology:</h4> Ruby gem</li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="grid-row">
+  <div class="column-half">
+    <h2 class="heading-large">Docker containers</h2>
+    <h3 class="heading-medium">Docker RabbitMQ Container</h3>
+    <ul>
+      <li><h4 class="heading-small">MoJ</h4></li>
+      <li>Docker RabbitMQ Container</li>
+      <li>
+        <h4 class="heading-small">Repository </h4>
+        <a href="https://github.com/ministryofjustice/docker-rabbitmq">
+          <h3>docker-rabbitmq</h3>
+        </a>
+      </li>
+      <li><h4 class="heading-small">Contact:</h4> Name Email@address.com</li>
+      <li><h4 class="heading-small">Created:</h4> 5 July 2015</li>
+      <li><h4 class="heading-small">last updated:</h4> 2 days ago</li>
+      <li><h4 class="heading-small">Technology:</h4> Docker</li>
+    </ul>
+  </div>
+  <div class="column-half">
+    <h2 class="heading-large">Ops</h2>
+    <h3 class="heading-medium">Heroku Buildpack: NGINX</h3>
+    <ul>
+      <li><h4 class="heading-small">HMRC</h4></li>
+      <li>Nginx-buildpack vendors NGINX inside a dyno and connects NGINX to an app server via UNIX domain sockets.</li>
+      <li>
+        <h4 class="heading-small">Repository </h4>
+        <a href="https://github.com/hmrc/nginx-buildpack">
+          <h3>nginx-buildpack</h3>
+        </a>
+      </li>
+      <li><h4 class="heading-small">Contact:</h4> Name Email@address.com</li>
+      <li><h4 class="heading-small">Created:</h4> 5 May 2013</li>
+      <li><h4 class="heading-small">last updated:</h4> 2 hours ago</li>
+      <li><h4 class="heading-small">Technology:</h4> shell script</li>
+    </ul>
+  </div>
+</div>
+</main>
+
+<% content_for(:footer_top) do %><footer-top></footer-top><% end %>
+
+<% content_for(:footer_support_links) do %><footer-support-links></footer-support-links><% end %>
+
+<% content_for(:body_end) do %><body-end></body-end><% end %>
+
+<% content_for(:skip_link_message, "Custom skip link text") %>
+
+<% content_for(:logo_link_title, "Custom logo link title text") %>
+
+<% content_for(:licence_message, "Custom license message text") %>
+
+<% content_for(:crown_copyright_message, "Custom crown copyright message text") %>
